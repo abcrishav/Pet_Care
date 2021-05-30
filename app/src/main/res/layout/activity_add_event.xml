@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="370dp"
+    android:padding="20dp"
+    tools:context=".addEvent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/select"
+            android:text="set puppy name"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:layout_below="@id/select"
+            android:textColor="@color/black"
+            android:text="Select Date"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/vaccination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/editTextDate"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/editTextDate"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+
+        <CheckBox
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="    Done"
+            android:layout_below="@id/vaccination"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/add"
+            app:layout_constraintTop_toBottomOf="@+id/vaccination" />
+
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="107dp"
+            android:layout_height="68dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="23dp"
+            android:text="add"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="123dp"
+            android:layout_height="68dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="61dp"
+            android:layout_marginRight="61dp"
+            android:layout_marginBottom="9dp"
+            android:layout_toStartOf="@+id/add"
+            android:layout_toLeftOf="@+id/add"
+            android:text="delete"
+            android:textSize="22sp" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
