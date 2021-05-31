@@ -6,4 +6,6 @@
     android:text="textview"
     android:textStyle="bold"
     android:textSize="20sp"
+    android:textColor="@color/white"
+    android:background="@color/design_default_color_primary_dark"
     android:textAppearance="?attr/textAppearanceSubtitle1"/>

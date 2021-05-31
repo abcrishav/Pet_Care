@@ -27,6 +27,7 @@ public class book_activity extends AppCompatActivity {
     private static final int RETURN_FROM_ADD =  3;
     private static final int RESULT_CODE_FROM_ADD_TO_MAIN = 4;
     private static final String FROM_ADD_TO_MAIN = "return from add";
+    public static String jump = "take the dog name";
 
     RecyclerView recyclerView;
     FloatingActionButton addEventFAB;
@@ -95,7 +96,8 @@ public class book_activity extends AppCompatActivity {
                 intent.putExtra(ADD_DATE,date);
                 //Intent requestLink = new Intent(.this, Results.class);
                 //requestLink.putExtra("Link1", sendLink1);
-                //intent.putExtra("Link2", puppy);
+                //Toast.makeText(getApplicationContext(),puppy,Toast.LENGTH_SHORT).show();
+                intent.putExtra(jump,puppy );
                 startActivity(intent);
                 //startActivityForResult(intent,3);
             }

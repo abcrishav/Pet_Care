@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="@color/purple_500"
+    app:cardBackgroundColor="@color/design_default_color_primary_dark"
     app:cardCornerRadius="10dp"
     app:cardElevation="8dp"
     android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:layout_toEndOf="@+id/checkBox"
             android:layout_toRightOf="@+id/checkBox"
             android:text="pet_name"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
             android:layout_alignRight="@id/pet_name"
             android:layout_alignParentLeft="true"
             android:text="TextView"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
             android:layout_marginStart="45dp"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="24dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_marginRight="22dp"
             android:layout_toEndOf="@+id/checkBox"
             android:layout_toRightOf="@+id/checkBox"
@@ -71,7 +71,7 @@
             android:clickable="false"
             android:shadowColor="#FFFFFF"
             android:text="vaccination_done"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textColorHighlight="#FFFFFF"
             android:textSize="16sp"
             android:theme="@style/Widget.AppCompat.CompoundButton.CheckBox" />

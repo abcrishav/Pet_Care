@@ -33,7 +33,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>{
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
 
-        holder.dimage.setImageResource(R.drawable.cat);
+        holder.dimage.setImageResource(R.drawable.dp_dog);
 
         holder.dname.setText(dataholder.get(position).getName());
         holder.dtype.setText(dataholder.get(position).getType());

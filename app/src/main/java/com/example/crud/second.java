@@ -34,7 +34,7 @@ public class second extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(second.this, book_activity.class);
-                intent.putExtra(Mesg,"message");
+                intent.putExtra(Mesg,message);
                 startActivity(intent);
             }
         });
@@ -48,13 +48,3 @@ public class second extends AppCompatActivity {
 
     }
 }
-/*
- <activity android:name="com.example.crud.pic"></activity>
-        <activity
-            android:name="com.example.crud.addEvent"
-            android:label="@string/title_activity_add_event"
-            android:theme="@style/Theme.Crud.NoActionBar" />
-        <activity android:name="com.example.crud.book_activity" />
-        <activity android:name="com.example.crud.second" />
-        <activity android:name="com.example.crud.fetchdata" />
- */

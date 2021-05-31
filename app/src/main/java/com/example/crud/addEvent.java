@@ -65,8 +65,8 @@ public class addEvent extends AppCompatActivity {
 
         //Bundle bundle=getIntent().getExtras();
         //String Link1 =bundle.getString("Link1");
-        String puppy_select ="abc";
-                //bundle.getString("Link2");
+        String puppy_select =intent.getStringExtra(book_activity.jump);
+        //String puppy_select = bundle.getString(book_activity.jump);
         puppy.setText(puppy_select);
 
         //setting data based on editing or adding

@@ -7,28 +7,28 @@
     app:cardUseCompatPadding="true"
     app:cardCornerRadius="6dp"
     android:elevation="4dp"
+    app:cardBackgroundColor="@color/design_default_color_primary_dark"
     android:layout_margin="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_margin="10dp"
         android:orientation="vertical"
-        android:padding="12dp"
-        android:background="@color/cardview_light_background">
+        android:padding="8dp"
+        android:background="@drawable/background">
 
         <ImageView
             android:id="@+id/avtar"
             android:layout_width="139dp"
             android:layout_height="129dp"
-
             tools:srcCompat="@drawable/dp_dog" />
 
 
         <TextView
             android:id="@+id/first"
             android:layout_width="232dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="2dp"
@@ -36,12 +36,12 @@
             android:layout_toRightOf="@+id/avtar"
             android:textColor="@color/design_default_color_primary_dark"
             android:text="nickname"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/second"
             android:layout_width="232dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/first"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -50,12 +50,12 @@
             android:layout_toEndOf="@+id/avtar"
             android:layout_toRightOf="@+id/avtar"
             android:text="settext"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/third"
             android:layout_width="232dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/second"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -64,13 +64,13 @@
             android:layout_toEndOf="@+id/avtar"
             android:layout_toRightOf="@+id/avtar"
             android:text="TextView"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
 
 
         <TextView
             android:id="@+id/fourth"
             android:layout_width="232dp"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/third"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -79,7 +79,7 @@
             android:layout_toEndOf="@+id/avtar"
             android:layout_toRightOf="@+id/avtar"
             android:text="TextView"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
 
 
 
