@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -42,16 +43,19 @@ public class fetchdata extends AppCompatActivity implements ClickInterface{
 
     @Override
     public void onItemClick(int position) {
-        Intent intent = new Intent(this, second.class);
-        intent.putExtra(msg, dataholder.get(position).getName());
+        String t = dataholder.get(position).getName();
+        Toast.makeText(getApplicationContext(),t, Toast.LENGTH_SHORT).show();
+        //Intent intent = new Intent(fetchdata.this, second.class);
+        Intent intent = new Intent(fetchdata.this, second.class);
+        intent.putExtra("pict",t);
         startActivity(intent);
 
     }
 
-    @Override
+    /*@Override
     public void onLongItemClick(int position) {
         dataholder.remove(position);
         //.notifyItemRemoved(position);
 
-    }
+    }*/
 }

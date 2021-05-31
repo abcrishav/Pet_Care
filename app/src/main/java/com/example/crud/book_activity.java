@@ -31,7 +31,7 @@ public class book_activity extends AppCompatActivity {
     RecyclerView recyclerView;
     FloatingActionButton addEventFAB;
     CustomListAdapter adapter;
-    dbmanager db;
+    DataBaseHelper db;
     SimpleDateFormat formatter;
     String date;
     Calendar calendar;
@@ -42,17 +42,17 @@ public class book_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book);
         Intent intent2 = getIntent();
-        String puppy = intent2.getStringExtra(second.Msg);
+        String puppy = intent2.getStringExtra(second.Mesg);
 
         formatter=new SimpleDateFormat("dd/MM/yyyy");
-        db=new dbmanager(book_activity.this);
+        db=new DataBaseHelper(book_activity.this);
 
 
         // initializations
         recyclerView =findViewById(R.id.recycler_view);
         addEventFAB=(FloatingActionButton) findViewById(R.id.add_event_fab);
         calendarView=(CalendarView) findViewById(R.id.calendarView);
-        //Intent intent =getIntent();
+        Intent intent =getIntent();
         calendar = Calendar.getInstance();
         Date date_obj = calendar.getTime();
         date = formatter.format(date_obj);
@@ -95,7 +95,7 @@ public class book_activity extends AppCompatActivity {
                 intent.putExtra(ADD_DATE,date);
                 //Intent requestLink = new Intent(.this, Results.class);
                 //requestLink.putExtra("Link1", sendLink1);
-                intent.putExtra("Link2", puppy);
+                //intent.putExtra("Link2", puppy);
                 startActivity(intent);
                 //startActivityForResult(intent,3);
             }

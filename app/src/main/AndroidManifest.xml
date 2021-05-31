@@ -10,20 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Crud">
         <activity android:name=".pic"></activity>
-        <activity android:name=".addEvent" />
         <activity
-            android:name=".AddEvent"
+            android:name=".addEvent"
             android:label="@string/title_activity_add_event"
             android:theme="@style/Theme.Crud.NoActionBar" />
         <activity android:name=".book_activity" />
         <activity android:name=".second" />
         <activity android:name=".fetchdata" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <activity android:name=".MainActivity">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
         </activity>
     </application>
 

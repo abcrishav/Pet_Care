@@ -16,23 +16,25 @@ public class second extends AppCompatActivity {
     Button schedule;
     FloatingActionButton fbtn2;
 
-    public static String Msg = "move to calender";;
+    public static String Mesg = "move to calender";;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        title = findViewById(R.id.copied);
+        title = (TextView)findViewById(R.id.copied);
+        schedule = (Button)findViewById(R.id.button3);
+        fbtn2 = (FloatingActionButton)findViewById(R.id.fbtn2);
         Intent intent = getIntent();
-        String message = intent.getStringExtra(fetchdata.msg);
+        String message = intent.getStringExtra("pict");
         title.setText(message);
 
         schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(second.this, book_activity.class);
-                intent.putExtra(Msg,message);
+                intent.putExtra(Mesg,"message");
                 startActivity(intent);
             }
         });
@@ -46,3 +48,13 @@ public class second extends AppCompatActivity {
 
     }
 }
+/*
+ <activity android:name="com.example.crud.pic"></activity>
+        <activity
+            android:name="com.example.crud.addEvent"
+            android:label="@string/title_activity_add_event"
+            android:theme="@style/Theme.Crud.NoActionBar" />
+        <activity android:name="com.example.crud.book_activity" />
+        <activity android:name="com.example.crud.second" />
+        <activity android:name="com.example.crud.fetchdata" />
+ */

@@ -11,72 +11,37 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class dbmanager extends SQLiteOpenHelper
-{
-    private static final String dbname="dbcontact";
-
-    /*public static final String TABLE_VACCINATION_DATA="vaccination_table";
+public class DataBaseHelper extends SQLiteOpenHelper {
+    private static final int DATABASE_VERSION = 3;
+    public static final String TABLE_VACCINATION_DATA="vaccination_table";
     public static final String EVENT_ID="event_id";
     public static final String PET_NAME ="petName";
     public static final String VACCINATION_DATE ="vaccinationdate";
     public static final String VACCINE_NAME ="vaccinename";
-    public static final String VACCINATION_DONE ="vaccinenationDone";*/
+    public static final String VACCINATION_DONE ="vaccinenationDone";
 
-    public dbmanager(@Nullable Context context)
-    {
-        super(context, dbname, null, 1);
+    //public DataBaseHandler(@Nullable Context context) {
+      //  super(context,TABLE_VACCINATION_DATA, null,DATABASE_VERSION);
+    //}
+
+    public DataBaseHelper(@Nullable Context context) {
+        super(context,TABLE_VACCINATION_DATA,null,DATABASE_VERSION);
     }
 
+
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase)
-    {
-        String qry="create table tbl_contact ( id integer primary key autoincrement, name text, type text, contact text, email text)";
-        sqLiteDatabase.execSQL(qry);
-        //new table
-       /* String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_VACCINATION_DATA+ "("
+    public void onCreate(SQLiteDatabase db) {
+        String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_VACCINATION_DATA+ "("
                 + EVENT_ID + " INTEGER PRIMARY KEY," + PET_NAME + " TEXT,"
                 + VACCINATION_DATE+ " TEXT," + VACCINE_NAME+" TEXT,"+VACCINATION_DONE+" INTEGER"+");";
-        sqLiteDatabase.execSQL(CREATE_CONTACTS_TABLE);*/
+        db.execSQL(CREATE_CONTACTS_TABLE);
     }
-
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1)
-    {
-        String qry="DROP TABLE IF EXISTS tbl_contact";
-        sqLiteDatabase.execSQL(qry);
-        onCreate(sqLiteDatabase);
-
-       // sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_VACCINATION_DATA);
-        //onCreate(sqLiteDatabase);
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_VACCINATION_DATA);
+        onCreate(db);
     }
 
-    public  String addrecord(String name, String type, String contact, String email)
-    {
-        SQLiteDatabase db=this.getWritableDatabase();
-
-        ContentValues cv=new ContentValues();
-        cv.put("name",name);
-        cv.put("type", type);
-        cv.put("contact",contact);
-        cv.put("email",email);
-        float res=db.insert("tbl_contact",null,cv);
-
-        if(res==-1)
-            return "Failed";
-        else
-            return  "Successfully inserted";
-
-    }
-
-    public Cursor readalldata()
-    {
-        SQLiteDatabase db=this.getWritableDatabase();
-        String qry="select * from tbl_contact order by id desc";
-        Cursor cursor=db.rawQuery(qry,null);
-        return  cursor;
-    }
-
-/*
     public void deleteContact(Long eventId) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_VACCINATION_DATA, EVENT_ID + " = ?",
@@ -142,5 +107,5 @@ public class dbmanager extends SQLiteOpenHelper
         if (cr != null)
             cr.moveToFirst();
         return new VaccinationDataItem(cr.getInt(0),cr.getString(1),cr.getString(2),cr.getString(3),cr.getInt(4));
-    }*/
+    }
 }

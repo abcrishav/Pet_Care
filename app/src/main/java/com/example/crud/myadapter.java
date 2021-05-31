@@ -70,13 +70,13 @@ public class myadapter extends RecyclerView.Adapter<myadapter.myviewholder>{
             });
 
 
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            /*itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     recyclerViewClickInterface.onLongItemClick(getAdapterPosition());
                     return true;
                 }
-            });
+            });*/
 
 
         }

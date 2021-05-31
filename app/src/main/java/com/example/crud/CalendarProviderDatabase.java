@@ -64,7 +64,7 @@ public class CalendarProviderDatabase {
         try {
             uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
             int eventID =  Integer.parseInt(uri.getLastPathSegment());
-            // Toast.makeText(this,"eventid is "+eventID,Toast.LENGTH_SHORT).show();
+            Toast.makeText(context.getApplicationContext(), "eventid is "+eventID,Toast.LENGTH_SHORT).show();
             vaccinationDataItem=new VaccinationDataItem(eventID,pet,date,vaccine,vacc_done?0:1);
             return vaccinationDataItem;
         }

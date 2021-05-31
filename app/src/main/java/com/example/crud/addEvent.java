@@ -42,7 +42,7 @@ public class addEvent extends AppCompatActivity {
     String date;
     int eventId;
 
-    dbmanager dbHandler;
+    DataBaseHelper dbHandler;
     Intent intent;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -50,7 +50,7 @@ public class addEvent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event);
-        //intent =getIntent();
+        intent =getIntent();
 
 
         //initializing the views
@@ -61,11 +61,12 @@ public class addEvent extends AppCompatActivity {
         puppy = findViewById(R.id.select);
         selectDate =(TextView) findViewById(R.id.editTextDate);
         vaccineNamesSpinner=(Spinner) findViewById(R.id.vaccination);
-        dbHandler= new dbmanager(addEvent.this);
+        dbHandler= new DataBaseHelper(addEvent.this);
 
-        Bundle bundle=getIntent().getExtras();
+        //Bundle bundle=getIntent().getExtras();
         //String Link1 =bundle.getString("Link1");
-        String puppy_select =bundle.getString("Link2");
+        String puppy_select ="abc";
+                //bundle.getString("Link2");
         puppy.setText(puppy_select);
 
         //setting data based on editing or adding
@@ -114,7 +115,7 @@ public class addEvent extends AppCompatActivity {
         };
 
 
-        AdapterView.OnItemSelectedListener petSpinnerClickListner = new AdapterView.OnItemSelectedListener() {
+ /*       AdapterView.OnItemSelectedListener petSpinnerClickListner = new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 //pet=parent.getItemAtPosition(position).toString();
@@ -124,7 +125,7 @@ public class addEvent extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        };
+        };*/
         //petNamesSpinner.setOnItemSelectedListener(petSpinnerClickListner);
         vaccineNamesSpinner.setOnItemSelectedListener(vacccinationClickListner);
         //loadPetData();
