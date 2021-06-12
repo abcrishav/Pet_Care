@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         String res=new dbmanager(this).addrecord(n,t,c,e);
         name.getEditText().setText("");
         //type.getEditText().setText("");
+        //act.getAdapter();
         contact.getEditText().setText("");
         email.getEditText().setText("");
         Toast.makeText(getApplicationContext(),res,Toast.LENGTH_SHORT).show();

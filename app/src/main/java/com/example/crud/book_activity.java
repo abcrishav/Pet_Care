@@ -32,7 +32,7 @@ public class book_activity extends AppCompatActivity {
     RecyclerView recyclerView;
     FloatingActionButton addEventFAB;
     CustomListAdapter adapter;
-    DataBaseHelper db;
+    dbmanager db;
     SimpleDateFormat formatter;
     String date;
     Calendar calendar;
@@ -46,7 +46,7 @@ public class book_activity extends AppCompatActivity {
         String puppy = intent2.getStringExtra(second.Mesg);
 
         formatter=new SimpleDateFormat("dd/MM/yyyy");
-        db=new DataBaseHelper(book_activity.this);
+        db=new dbmanager(book_activity.this);
 
 
         // initializations

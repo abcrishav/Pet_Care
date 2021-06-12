@@ -42,7 +42,7 @@ public class addEvent extends AppCompatActivity {
     String date;
     int eventId;
 
-    DataBaseHelper dbHandler;
+    dbmanager dbHandler;
     Intent intent;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -61,7 +61,7 @@ public class addEvent extends AppCompatActivity {
         puppy = findViewById(R.id.select);
         selectDate =(TextView) findViewById(R.id.editTextDate);
         vaccineNamesSpinner=(Spinner) findViewById(R.id.vaccination);
-        dbHandler= new DataBaseHelper(addEvent.this);
+        dbHandler= new dbmanager(addEvent.this);
 
         //Bundle bundle=getIntent().getExtras();
         //String Link1 =bundle.getString("Link1");
